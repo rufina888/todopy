@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Library</title>
+<link rel="stylesheet" href=./styles/bookstyle.css>
+<link rel="stylesheet" href=./styles/bookcheckbox.css>
+</head>
+<body>  
+	<section>
+        <div class="create_container">
+            <input type="text" class="create_input" placeholder="Название книги"/>
+            <input type="text" class="create_input" placeholder="Подзаголовок"/>
+            <input type="text" class="create_input" placeholder="Описание"/>
+            <input type="text" class="create_input" placeholder="Стоимость"/>
+            <input type="text" class="create_input" placeholder="Жанр"/>
+            <input type="text" class="create_input" placeholder="Автор"/>
+            <input type="text" class="create_input" placeholder="Год выпуска"/>
+            <input type="text" class="create_input" placeholder="дата добавления"/>
+            <button class="create_button">Добавить</button>
+        </div>
+        <div class="todo_container">
+            <div class="todo_item">
+                <div class="todo_item_header">
+                    <label class="checkbox_container">
+                        <input type="checkbox"/>
+                        <span class="checkmark"></span>
+                    </label>
+                    <h4> {{ book.text }} </h4>
+                </div>
+                <div class="todo_item_footer">
+                    <ul>
+                    <li>{{ book.subtitle }}</li>
+                    <li>{{ book.description }}</li>
+                    <li>800 сом</li>
+                    <li>Фантастика</li>
+                    <li>Жюль Верн</li>
+                    <li>1875 год</li>
+                    <li>17.11.2020 <span>17:22</span></li>
+                    </ul>
+                    <div class="action_buttons">
+                        <img src="./icons/star.png">
+                        <img src="./icons/basket.png">  
+                    </div>
+                </div>
+            </div>
+            <div class="todo_item marked">
+                <div class="todo_item_header">
+                    <label class="checkbox_container">
+                        <input type="checkbox"/>
+                        <span class="checkmark"></span>
+                    </label>
+                     <h4>"Война и Мир"</h4>
+                </div>
+                <div class="todo_item_footer">
+                    <ul>
+                    <li>Россия в эпоху войны</li>
+                    <li>Про любовь</li>
+                    <li>2000 сом</li>
+                    <li>Роман</li>
+                    <li>Лев Толстой</li>
+                    <li>1867 год</li>
+                    <li>17.11.2020 <span>17:22</span></li>
+                    </ul>
+                    <div class="action_buttons">
+                        <img src="./icons/yellow.png">
+                        <img src="./icons/basket.png">   
+                    </div>
+                </div>
+            </div>
+            <div class="todo_item done">
+                <div class="todo_item_header">
+                    <label class="checkbox_container">
+                        <input type="checkbox"/>
+                        <span class="checkmark"></span>
+                    </label>
+                     <h4>"Унесенные ветром"</h4>
+                </div>
+                <div class="todo_item_footer">
+                    <ul>
+                    <li>Скарлет Охара</li>
+                    <li>Про любовь</li>
+                    <li>1000 сом</li>
+                    <li>Роман</li>
+                    <li>Маргарет Митчелл</li>
+                    <li>1936 год</li>
+                    <li>17.11.2020 <span>17:22</span></li>
+                    </ul>
+
+                    <div class="action_buttons">
+                        <img src="./icons/star.png">
+                        <img src="./icons/basket.png">   
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
